@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import WalletConnect from './components/WalletConnect';
+import YieldTracker from './components/YieldTracker';
 
 function App() {
   const [connectedWallet, setConnectedWallet] = useState(null);
@@ -26,9 +27,7 @@ function App() {
             <div className="dashboard">
               <h2>Dashboard</h2>
               <p>Welcome! Your wallet is connected.</p>
-              <div className="coming-soon">
-                <p>Yield tracking features coming soon...</p>
-              </div>
+              <YieldTracker walletAddress={connectedWallet} />
             </div>
           ) : (
             <div className="welcome">
